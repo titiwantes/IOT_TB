@@ -1,0 +1,33 @@
+{
+  "name": "sensor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "files": [
+    "/dist",
+    "README.md",
+    "docker-compose.yml",
+    "Dockerfile"
+  ],
+  "scripts": {
+    "start": "ts-node ./src/main.ts",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/joi": "^17.2.3",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.177",
+    "@types/socket.io": "^3.0.2",
+    "coap": "^0.26.0",
+    "joi": "^17.4.2",
+    "lodash": "^4.17.21",
+    "socket.io": "^4.4.0"
+  }
+}
