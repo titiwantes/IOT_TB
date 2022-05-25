@@ -1,0 +1,29 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.line{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.stack{
+  display: flex;
+  flex-direction: row;
+}
+.fluidsensors{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
