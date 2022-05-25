@@ -1,0 +1,40 @@
+{
+  "name": "Fluid profile",
+  "description": "",
+  "image": null,
+  "type": "DEFAULT",
+  "transportType": "COAP",
+  "provisionType": "DISABLED",
+  "defaultRuleChainId": null,
+  "defaultDashboardId": null,
+  "defaultQueueName": "",
+  "profileData": {
+    "configuration": {
+      "type": "DEFAULT"
+    },
+    "transportConfiguration": {
+      "type": "COAP",
+      "coapDeviceTypeConfiguration": {
+        "coapDeviceType": "DEFAULT",
+        "transportPayloadTypeConfiguration": {
+          "transportPayloadType": "JSON"
+        }
+      },
+      "clientSettings": {
+        "powerMode": "DRX",
+        "psmActivityTimer": null,
+        "edrxCycle": null,
+        "pagingTransmissionWindow": null
+      }
+    },
+    "provisionConfiguration": {
+      "type": "DISABLED",
+      "provisionDeviceSecret": null
+    },
+    "alarms": null
+  },
+  "provisionDeviceKey": null,
+  "firmwareId": null,
+  "softwareId": null,
+  "default": false
+}

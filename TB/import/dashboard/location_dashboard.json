@@ -1,0 +1,331 @@
+{
+  "title": "Location dashboard",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "description": "",
+    "widgets": {
+      "4ca853f2-f2f9-30a0-8912-ce9540b69115": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "bars",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "78b37bf7-a8e2-4319-d464-663a5c2dc741",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "x",
+                  "type": "timeseries",
+                  "label": "x",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.009822072430238471
+                },
+                {
+                  "name": "y",
+                  "type": "timeseries",
+                  "label": "y",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.4527476365128611
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTooltip": true
+          },
+          "title": "Location sensor 1",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false,
+          "legendConfig": {
+            "direction": "column",
+            "position": "bottom",
+            "sortDataKeys": false,
+            "showMin": false,
+            "showMax": false,
+            "showAvg": false,
+            "showTotal": false
+          }
+        },
+        "row": 0,
+        "col": 0,
+        "id": "4ca853f2-f2f9-30a0-8912-ce9540b69115"
+      },
+      "863504ca-5d0d-fc71-f07f-284ac4e3593e": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "bars",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "2011551e-4e03-cd53-0ae1-66385d0d9110",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "x",
+                  "type": "timeseries",
+                  "label": "x",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.17955111056311668
+                },
+                {
+                  "name": "y",
+                  "type": "timeseries",
+                  "label": "y",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.26527869657545766
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTooltip": true
+          },
+          "title": "Location sensor 2",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "863504ca-5d0d-fc71-f07f-284ac4e3593e"
+      },
+      "f40e577d-e4df-08f3-95be-35db2ca8765a": {
+        "isSystemType": true,
+        "bundleAlias": "charts",
+        "typeAlias": "bars",
+        "type": "latest",
+        "title": "New widget",
+        "image": null,
+        "description": null,
+        "sizeX": 7,
+        "sizeY": 5,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "name": null,
+              "entityAliasId": "27a01d0c-45fb-578c-4763-1576af317d12",
+              "filterId": null,
+              "dataKeys": [
+                {
+                  "name": "x",
+                  "type": "timeseries",
+                  "label": "x",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.2545726983964183
+                },
+                {
+                  "name": "y",
+                  "type": "timeseries",
+                  "label": "y",
+                  "color": "#4caf50",
+                  "settings": {},
+                  "_hash": 0.6499821666441759
+                }
+              ]
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "#fff",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTooltip": true
+          },
+          "title": "Location sensor 3",
+          "showTitleIcon": false,
+          "titleTooltip": "",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "widgetStyle": {},
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "noDataDisplayMessage": "",
+          "showLegend": false
+        },
+        "row": 0,
+        "col": 0,
+        "id": "f40e577d-e4df-08f3-95be-35db2ca8765a"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Location dashboard",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "4ca853f2-f2f9-30a0-8912-ce9540b69115": {
+                "sizeX": 7,
+                "sizeY": 5,
+                "row": 0,
+                "col": 0
+              },
+              "863504ca-5d0d-fc71-f07f-284ac4e3593e": {
+                "sizeX": 7,
+                "sizeY": 5,
+                "row": 0,
+                "col": 7
+              },
+              "f40e577d-e4df-08f3-95be-35db2ca8765a": {
+                "sizeX": 7,
+                "sizeY": 5,
+                "row": 0,
+                "col": 14
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "78b37bf7-a8e2-4319-d464-663a5c2dc741": {
+        "id": "78b37bf7-a8e2-4319-d464-663a5c2dc741",
+        "alias": "Location sensor 1",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "fc040e40-513a-11ec-8f14-a1a52fece61e"
+          }
+        }
+      },
+      "2011551e-4e03-cd53-0ae1-66385d0d9110": {
+        "id": "2011551e-4e03-cd53-0ae1-66385d0d9110",
+        "alias": "Location sensor 2",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "fc02fcd0-513a-11ec-8f14-a1a52fece61e"
+          }
+        }
+      },
+      "27a01d0c-45fb-578c-4763-1576af317d12": {
+        "id": "27a01d0c-45fb-578c-4763-1576af317d12",
+        "alias": "Location sensor 3",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "fc06cd60-513a-11ec-8f14-a1a52fece61e"
+          }
+        }
+      }
+    },
+    "filters": {},
+    "timewindow": {
+      "displayValue": "",
+      "hideInterval": false,
+      "hideAggregation": false,
+      "hideAggInterval": false,
+      "hideTimezone": false,
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "quickInterval": "CURRENT_DAY"
+      },
+      "history": {
+        "historyType": 0,
+        "interval": 1000,
+        "timewindowMs": 60000,
+        "fixedTimewindow": {
+          "startTimeMs": 1638122517046,
+          "endTimeMs": 1638208917046
+        },
+        "quickInterval": "CURRENT_DAY"
+      },
+      "aggregation": {
+        "type": "AVG",
+        "limit": 25000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "name": "Location dashboard"
+}

@@ -3,12 +3,12 @@ import { sendRequestCoAP } from "../src/coap"
 import { SensorClass } from "./SensorClass"
 
 const normalRangeTemp = {
-  min: 20,
+  min: -10,
   max: 30
 }
 
 const normalRangeHumidity = {
-  min: 30,
+  min: 15,
   max: 50
 }
 
@@ -33,10 +33,21 @@ export class TempSensorClass extends SensorClass {
 
     if (chance >= 100 - 25 && this.tempValues.status) {
       this.tempValues.last = telemetry.temperature
-      telemetry.temperature = Math.floor((Math.random() * 500));
+      telemetry.temperature = Math.floor((Math.random() * 2 * 999) - 999);
       this.tempValues.status = false
     } else {
-        telemetry.temperature = this.tempValues.last;
+        chance = Math.random()*101
+        if (chance > 50) {
+          chance = Math.random()*101
+          if (chance > 50){
+            telemetry.temperature = this.tempValues.last + 1;
+          } else {
+            telemetry.temperature = this.tempValues.last -1;
+          }
+          this.tempValues.last = telemetry.temperature;
+        } else {
+          telemetry.temperature = this.tempValues.last;
+        }
         this.tempValues.status = true;
     }
 
@@ -45,11 +56,22 @@ export class TempSensorClass extends SensorClass {
 
     if (chance >= 100 - 10 && this.humiValues.status) {
       this.humiValues.last = telemetry.humidity;
-      telemetry.humidity = Math.floor((Math.random() * 500));
+      telemetry.humidity = Math.floor((Math.random() * 2 * 999) - 999);
       this.humiValues.status = false
     } else {
-        telemetry.humidity = this.humiValues.last;
-        this.humiValues.status = true;
+      chance = Math.random()*101
+        if (chance > 50) {
+          chance = Math.random()*101
+          if (chance > 50){
+            telemetry.humidity = this.humiValues.last + 1
+          }else {
+            telemetry.humidity = this.humiValues.last - 1
+          }
+          this.humiValues.last = telemetry.humidity
+          } else {
+            telemetry.humidity = this.humiValues.last;
+          }
+          this.humiValues.status = true;
     }
   }
 
