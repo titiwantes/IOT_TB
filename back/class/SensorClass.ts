@@ -68,9 +68,8 @@ export class SensorClass {
   sendTelemetry(telemetry: any) {
     try {
       this.telemetry = telemetry
-      this.methodSendTelemetry(telemetry).then((result: any) => {
-        this.roomSocket.emit('sendTelemetry', this.info.id, result)
-      })
+      this.roomSocket.emit('sendTelemetry', this.info.token, telemetry)
+      this.methodSendTelemetry(telemetry)
     } catch(e) {
       this.roomSocket.emit('sendTelemetry', this.info.id, {state: 'KO', message: 'No ThingsBoard'})
     }

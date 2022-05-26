@@ -8,7 +8,6 @@ function LocationSensor({socket, name, token}){
         useEffect(() => {
             socket.on('newTelemetry', (id, tok, data) => {
                 if (tok == token) {
-                    console.log(data)
                     setLocation({lat: data.x, lon: data.y})
                 }
             })

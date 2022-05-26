@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
-import './App.css';
 import FluidSensor from "./Sensors/FluidSensor/FluidSensor";
 import LightSensor from "./Sensors/LightSensor/LightSensor";
 import LocationSensor from "./Sensors/LocationSensor/LocationSensor";
 import TemperatureSensor from "./Sensors/TempHumiSensor/Temperature";
+import './App.css';
 
 const socket = io.connect('http://localhost:3001')
 
@@ -19,6 +19,8 @@ function App() {
     })
   }, [])
   
+
+
 
   return (
 

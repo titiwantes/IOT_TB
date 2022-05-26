@@ -13,7 +13,6 @@ function LightSensor({socket, token, name}){
     useEffect(() => {
         socket.on('sendTelemetry', (id ,data) => {
           if (id == token){
-            setData(data)
             setIntensity(data.intensity)
             setStatus(data.status)
           }
