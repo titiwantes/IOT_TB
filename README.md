@@ -12,4 +12,4 @@ We have 3 elements in our architecture:
 - A front Web Application
 - ThingsBoard
 
-![IOT Architecture](Architecture_diagram.png)
+![IOT Architecture](/assets/Architecture_diagram.png)
