@@ -3,12 +3,12 @@ import './locationsensor.css'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 function LocationSensor({socket, name, token}){
-        const [location, setLocation] = useState({lat: 0, lon: 0})
+        const [location, setLocation] = useState({latitude: 0, longitude: 0})
 
         useEffect(() => {
             socket.on('newTelemetry', (id, tok, data) => {
                 if (tok == token) {
-                    setLocation({lat: data.x, lon: data.y})
+                    setLocation({latitude: data.latitude, longitude: data.longitude})
                 }
             })
 
@@ -18,8 +18,8 @@ function LocationSensor({socket, name, token}){
                 <LocationOnIcon className='icon'/>
                 <h2 className="title">{name} </h2>
             </div>
-            <span className="lon">Lon: {Math.round(location.lon * 100)/100}</span>
-            <span className="lat">Lat: {Math.round(location.lat*100)/100}</span>
+            <span className="lon">Lon: {Math.round(location.longitude * 100)/100}</span>
+            <span className="lat">Lat: {Math.round(location.latitude *100)/100}</span>
         </div>
      
 }
