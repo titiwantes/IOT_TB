@@ -30,8 +30,14 @@ All the sensors will be detailled in the **back** part of the project.
 
 ## Thingsboard Dashboards
 
+### Temperature/Humidity sensor dashboard
+
 ![Screenshot](assets/temperatureDashboardScreen.png)
 
+### Light sensor dashboard
+
 ![Screenshot](assets/lightDashboardScreen.png)
+
+### Fluid sensor dashboard
 
 ![Screenshot](assets/fluidDashboardScreen.png)

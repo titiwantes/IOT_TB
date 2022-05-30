@@ -31,6 +31,12 @@ As a user, you will be able to:
    - Change the fluid quantity in L
    - Change the consumption in mL
 
+#### Telemetry
+telemetry: {available: number, consumption: number}
+
+#### Attributes
+attributes: {fluidType: string}
+
 ### Light Sensors
 
 The light sensor is inspired of the light.
@@ -38,6 +44,9 @@ The light sensor is inspired of the light.
 As a user, you will be able to:
    - Change the status of the light ON/OFF
    - Change intensity of the light
+
+#### Telemetry
+telemetry: {status: boolean, intensity: number}
 
 #### Light Sensors Rules
 
@@ -47,6 +56,9 @@ It's possible to see the light status and change it. Also, you'll see the light 
 
 The location sensors is an indicator to show the differents sensors spots.
 These sensors don't have any rules. There are only use to place the different sensors.
+#### Telemetry
+telemetry: {latitude: number, longitude: number}
+
 
 ### Temperature Sensors
 
@@ -55,6 +67,9 @@ We have 2 different data for the temperature sensors:
    - The Temperature
 
 All these data will be displayed on ThingsBoard and in the web application.
+
+#### Telemetry
+telemetry: { temperature: number, humidity: number }
 
 #### Temperature Sensors Rules
 
