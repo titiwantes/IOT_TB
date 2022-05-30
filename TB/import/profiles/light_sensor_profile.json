@@ -1,9 +1,9 @@
 {
-  "name": "Fluid profile",
+  "name": "Light sensor profile",
   "description": "",
   "image": null,
   "type": "DEFAULT",
-  "transportType": "COAP",
+  "transportType": "DEFAULT",
   "provisionType": "DISABLED",
   "defaultRuleChainId": null,
   "defaultDashboardId": null,
@@ -13,19 +13,7 @@
       "type": "DEFAULT"
     },
     "transportConfiguration": {
-      "type": "COAP",
-      "coapDeviceTypeConfiguration": {
-        "coapDeviceType": "DEFAULT",
-        "transportPayloadTypeConfiguration": {
-          "transportPayloadType": "JSON"
-        }
-      },
-      "clientSettings": {
-        "powerMode": "DRX",
-        "psmActivityTimer": null,
-        "edrxCycle": null,
-        "pagingTransmissionWindow": null
-      }
+      "type": "DEFAULT"
     },
     "provisionConfiguration": {
       "type": "DISABLED",
