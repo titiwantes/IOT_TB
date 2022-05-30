@@ -27,11 +27,6 @@ function FluidSensor({socket, token, name}){
       console.log(id, attributes, token)
     })
   }, [])
-
-  function sendTelemetry(value){
-    console.log(value)
-    socket.emit('test', token, value)
-  }
   
   function handleConsumption(event, c) {
     setConsumption(c)
