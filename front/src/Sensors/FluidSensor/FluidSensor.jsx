@@ -46,7 +46,7 @@ function FluidSensor({socket, token, name}){
     console.log(input)
     setFluid(input)
     setInput('')
-    socket.emit('changeAttributesToken',token,{fluidType: fluid} )
+    socket.emit('changeAttributesToken',token,{fluidType: input} )
   }
     return (
         <div className="fluidsensor" >
