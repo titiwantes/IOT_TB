@@ -20,26 +20,29 @@ You may also see any lint errors in the console.
 
 ## Sensors
 
-![Screenshot](assets/lightScreen.png)
-
-### light Sensor
+### Light Sensor
 
 you can manage the status of the light, change its intensity and see its status directly.
 
-![Screenshot](assets/fluidScreen.png)
+![Screenshot](assets/lightScreen.png)
+
 
 ### Fluid Sensor 
 
 you can manage the quantity of fluid available, its consumption and indicate which type of fluid it is
 
-![Screenshot](assets/tempScreen.png)
+![Screenshot](assets/fluidScreen.png)
+
 
 ### Temperature/Humidity Sensor
 
 You can see the temperature and humidity of the place where your sensor is located
 
-![Screenshot](assets/locScreen.png)
+![Screenshot](assets/tempScreen.png)
 
 ### Location Sensor
 
 You can see the longitude and latitude of the location of your sensor
+
+![Screenshot](assets/locScreen.png)
+
