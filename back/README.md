@@ -34,7 +34,10 @@ As a user, you will be able to:
 ### Light Sensors
 
 The light sensor is inspired of the light.
-We can switch on and off the light. It's also possible to choose the light intensity.
+
+As a user, you will be able to:
+   - Change the status of the light ON/OFF
+   - Change intensity of the light
 
 #### Light Sensors Rules
 
