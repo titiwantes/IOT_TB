@@ -45,3 +45,26 @@ To import all devices. You need, in ThingsBoard web site, go to this `http://loc
 To import all dashboards. You need, in ThingsBoard web site, go to this `http://localhost:8080/dashboards` and click `+` button, select `import device profile`, select one of the json in the folder `import/dashboard`. repeat this task for every dashboard.
 
 After that all thingsboard is initialize and ready to use.
+
+## Dashboard Description
+
+In ThingsBoard, you'll be able to see 4 different Dashbord.
+You'll have a description of each dashboard below.
+
+### Fluid Dashboard
+
+In the Fluid Dashboard, you'll see all the data about the 3 fluid sensors.
+You'll be able to see the quantity available and their consumption.
+
+### Humidity Dashboard
+
+The Humidity Dashboard regroups all the humidity sensors.
+We separated the humidity and temperature. So, we have dashboard for each of them.
+
+### Temperature Dashboard
+
+This Dashboard shows all the temperature's data.
+
+### Location Dashboard
+
+The Location Dashboard allows you to see all the sensors's locations.
