@@ -28,4 +28,6 @@ We have a total of **18 sensors**.
 
 All the sensors will be detailled in the **back** part of the project.
 
+## Thingsboard Dashboards
 
+![plot](./assets/temperatureDashboardScreen.png)
