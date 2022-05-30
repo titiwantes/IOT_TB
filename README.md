@@ -30,4 +30,4 @@ All the sensors will be detailled in the **back** part of the project.
 
 ## Thingsboard Dashboards
 
-![plot](./assets/temperatureDashboardScreen.png)
+![Screenshot](./assets/temperatureDashboardScreen.png)
