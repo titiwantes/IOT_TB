@@ -34,7 +34,7 @@
           "startInterval": 24,
           "startIntervalTimeUnit": "HOURS",
           "endInterval": 10,
-          "endIntervalTimeUnit": "SECONDS",
+          "endIntervalTimeUnit": "MINUTES",
           "startIntervalPattern": "",
           "endIntervalPattern": ""
         }
