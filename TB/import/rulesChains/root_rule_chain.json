@@ -9,8 +9,47 @@
     "configuration": null
   },
   "metadata": {
-    "firstNodeIndex": 7,
+    "firstNodeIndex": 10,
     "nodes": [
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1122,
+          "layoutY": 239
+        },
+        "type": "org.thingsboard.rule.engine.flow.TbRuleChainInputNode",
+        "name": "Fluid delta calculation",
+        "debugMode": false,
+        "configuration": {
+          "ruleChainId": "f79edda0-e0bc-11ec-875b-3da0daecf584"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1118,
+          "layoutY": 328
+        },
+        "type": "org.thingsboard.rule.engine.flow.TbRuleChainInputNode",
+        "name": "Humidity delta calculation",
+        "debugMode": false,
+        "configuration": {
+          "ruleChainId": "dde6b1c0-de56-11ec-875b-3da0daecf584"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 1115,
+          "layoutY": 407
+        },
+        "type": "org.thingsboard.rule.engine.flow.TbRuleChainInputNode",
+        "name": "Intensity delta calculation",
+        "debugMode": false,
+        "configuration": {
+          "ruleChainId": "6ed30780-e0bc-11ec-875b-3da0daecf584"
+        }
+      },
       {
         "additionalInfo": {
           "description": "",
@@ -114,38 +153,53 @@
     ],
     "connections": [
       {
-        "fromIndex": 1,
+        "fromIndex": 4,
+        "toIndex": 3,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 4,
         "toIndex": 0,
         "type": "Success"
       },
       {
-        "fromIndex": 3,
-        "toIndex": 5,
+        "fromIndex": 4,
+        "toIndex": 1,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 4,
+        "toIndex": 2,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 6,
+        "toIndex": 8,
         "type": "Other"
       },
       {
-        "fromIndex": 3,
-        "toIndex": 2,
+        "fromIndex": 6,
+        "toIndex": 5,
         "type": "Post attributes"
       },
       {
-        "fromIndex": 3,
-        "toIndex": 1,
+        "fromIndex": 6,
+        "toIndex": 4,
         "type": "Post telemetry"
       },
       {
-        "fromIndex": 3,
-        "toIndex": 4,
+        "fromIndex": 6,
+        "toIndex": 7,
         "type": "RPC Request from Device"
       },
       {
-        "fromIndex": 3,
-        "toIndex": 6,
+        "fromIndex": 6,
+        "toIndex": 9,
         "type": "RPC Request to Device"
       },
       {
-        "fromIndex": 7,
-        "toIndex": 3,
+        "fromIndex": 10,
+        "toIndex": 6,
         "type": "Success"
       }
     ],

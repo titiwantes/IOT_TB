@@ -5,7 +5,7 @@ import { SensorClass } from "./SensorClass"
 export class FluidSensorClass extends SensorClass {
   readonly host: string | undefined
   readonly path: string
-  telemetry: {available: number, consumption: number} = { available: 9, consumption: 10 }
+  telemetry: {available: number, consumption: number} = { available: 100, consumption: 100 }
   attributes: {fluidType: string} = {fluidType: "Water"}
 
   constructor(host: string | undefined, path: string, info: Sensor, roomSocket: any) {
@@ -16,29 +16,26 @@ export class FluidSensorClass extends SensorClass {
   }
 
   randomTelemetry(telemetry: {available: number, consumption: number}): void {
-    let chance = Math.floor(Math.random() * 101);
+    if (telemetry.available > 0) {
+      if (telemetry.available - (telemetry.consumption *0.001) < 0) {telemetry.available = 0} 
+      else {telemetry.available  -= telemetry.consumption * 0.001}
 
-    if (chance >= 100 - 1) {
-      telemetry.available += Math.floor((Math.random() * 3) + 1);
-    }
-    if (chance >= 100 - 50) {
-      telemetry.consumption = Math.floor((Math.random() * 10) + 1);
-    }
-
-    telemetry.available -= telemetry.consumption / 1000
-    if (telemetry.available <= 0) {
-      telemetry.consumption = 0
-      telemetry.available = 0
+      let chance = Math.random()*101
+      
+      if (chance > 95) {
+        let chance = Math.random()*50
+        if (telemetry.available + chance >= 100){telemetry.available = 100} 
+        else {telemetry.available += chance}
+      }
+    } else {
+      let chance = Math.random()*101
+      if (chance > 70){telemetry.available += 100}
     }
   }
 
   methodSendTelemetry(telemetry: { available: number, consumption: number }): Promise<any> {
     let toSend: any = {}
 
-    if (telemetry.available <= 0) {
-      telemetry.consumption = 0
-      telemetry.available = 0
-    }
     toSend.available = telemetry.available.toPrecision(4)
     toSend.consumption = telemetry.consumption
     return sendRequestCoAP(this.host, this.path + this.info.token + '/telemetry', toSend)

@@ -20,6 +20,7 @@ function FluidSensor({socket, token, name}){
     socket.on('newTelemetry', (id ,tok ,data) => {
       if (tok === token){
         setQuantity(data.available)
+        setConsumption(data.consumption)
       }
     })
 
@@ -30,12 +31,12 @@ function FluidSensor({socket, token, name}){
   
   function handleConsumption(event, c) {
     setConsumption(c)
-    socket.emit('changeTelemetryToken', token, {available: quantity, consumption: consumption})
+    socket.emit('changeTelemetryToken', token, {available: quantity, consumption: c})
   }
 
   function handleQuantity(event,t){
     setQuantity(t)
-    socket.emit('changeTelemetryToken', token, {available: quantity, consumption: consumption})
+    socket.emit('changeTelemetryToken', token, {available: t, consumption: consumption})
   }
 
   function handleType(e) {
@@ -58,7 +59,7 @@ function FluidSensor({socket, token, name}){
           <span className="quantity">Quantity {quantity} L</span>
           <span className="fluidType">Fluid type : {fluid}</span>
           <span className="total">Total : {total} L</span>
-          <span className="consumption">Consumption : {consumption} ml/m</span>
+          <span className="consumption">Consumption : {consumption} ml/s</span>
           <div className='fluidInput'><input type="text" value={input} onChange={handleType} /> <button onClick={sendInput}>send</button></div>
           
           <div className="sliderDiv">

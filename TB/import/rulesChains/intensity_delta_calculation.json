@@ -1,0 +1,85 @@
+{
+  "ruleChain": {
+    "additionalInfo": {
+      "description": ""
+    },
+    "name": "Intensity delta calculation",
+    "type": "CORE",
+    "firstRuleNodeId": null,
+    "root": false,
+    "debugMode": false,
+    "configuration": null
+  },
+  "metadata": {
+    "firstNodeIndex": 0,
+    "nodes": [
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 303,
+          "layoutY": 151
+        },
+        "type": "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode",
+        "name": "Last ten minutes",
+        "debugMode": false,
+        "configuration": {
+          "latestTsKeyNames": [
+            "intensity"
+          ],
+          "aggregation": "NONE",
+          "fetchMode": "LAST",
+          "orderBy": "ASC",
+          "limit": 1000,
+          "useMetadataIntervalPatterns": false,
+          "startInterval": 24,
+          "startIntervalTimeUnit": "HOURS",
+          "endInterval": 10,
+          "endIntervalTimeUnit": "MINUTES",
+          "startIntervalPattern": "",
+          "endIntervalPattern": ""
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 550,
+          "layoutY": 151
+        },
+        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "name": "Calculate delta",
+        "debugMode": false,
+        "configuration": {
+          "jsScript": "var newMsg = {};\n\nnewMsg.deltaIntensity = parseFloat(Math.abs(msg.intensity - JSON.parse(metadata.intensity)).toFixed(2));\nreturn {msg: newMsg, metadata: metadata, msgType: msgType};"
+        }
+      },
+      {
+        "additionalInfo": {
+          "description": "",
+          "layoutX": 818,
+          "layoutY": 151
+        },
+        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "name": "Save",
+        "debugMode": false,
+        "configuration": {
+          "defaultTTL": 0,
+          "skipLatestPersistence": false,
+          "useServerTs": false
+        }
+      }
+    ],
+    "connections": [
+      {
+        "fromIndex": 0,
+        "toIndex": 1,
+        "type": "Success"
+      },
+      {
+        "fromIndex": 1,
+        "toIndex": 2,
+        "type": "Success"
+      }
+    ],
+    "ruleChainConnections": null
+  }
+}

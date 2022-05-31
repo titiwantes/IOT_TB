@@ -31,13 +31,13 @@ export class TempSensorClass extends SensorClass {
   randomTelemetry(telemetry: { temperature: number , humidity: number}): void {
     let chance = Math.floor(Math.random() * 101);
 
-    if (chance >= 100 - 25 && this.tempValues.status) {
+    if (chance >= 100 - 10 && this.tempValues.status) {
       this.tempValues.last = telemetry.temperature
       telemetry.temperature = Math.floor((Math.random() * 2 * 999) - 999);
       this.tempValues.status = false
     } else {
         chance = Math.random()*101
-        if (chance > 50) {
+        if (chance > 99) {
           chance = Math.random()*101
           if (chance > 50){
             telemetry.temperature = this.tempValues.last + 1;
@@ -60,7 +60,7 @@ export class TempSensorClass extends SensorClass {
       this.humiValues.status = false
     } else {
       chance = Math.random()*101
-        if (chance > 50) {
+        if (chance > 99) {
           chance = Math.random()*101
           if (chance > 50){
             telemetry.humidity = this.humiValues.last + 1
