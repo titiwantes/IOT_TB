@@ -21,102 +21,10 @@
     },
     "alarms": [
       {
-        "id": "43a3c095-80f6-373c-16ec-6db54d1e458d",
-        "alarmType": "Mandatory Alarm temperature",
+        "id": "0d11ad36-190c-0e80-3c32-7fdc889fd760",
+        "alarmType": "Alarm",
         "createRules": {
-          "CRITICAL": {
-            "condition": {
-              "condition": [
-                {
-                  "key": {
-                    "type": "TIME_SERIES",
-                    "key": "temperature"
-                  },
-                  "valueType": "NUMERIC",
-                  "value": null,
-                  "predicate": {
-                    "type": "NUMERIC",
-                    "operation": "GREATER",
-                    "value": {
-                      "defaultValue": 15,
-                      "userValue": null,
-                      "dynamicValue": null
-                    }
-                  }
-                }
-              ],
-              "spec": {
-                "type": "DURATION",
-                "unit": "MINUTES",
-                "predicate": {
-                  "defaultValue": 10,
-                  "userValue": null,
-                  "dynamicValue": null
-                }
-              }
-            },
-            "schedule": null,
-            "alarmDetails": null,
-            "dashboardId": null
-          }
-        },
-        "clearRule": null,
-        "propagate": false,
-        "propagateToOwner": false,
-        "propagateToTenant": false,
-        "propagateRelationTypes": null
-      },
-      {
-        "id": "b3fb1874-7df4-8746-7ba6-49a209cafde5",
-        "alarmType": "Temperature Warning",
-        "createRules": {
-          "WARNING": {
-            "condition": {
-              "condition": [
-                {
-                  "key": {
-                    "type": "TIME_SERIES",
-                    "key": "temperature"
-                  },
-                  "valueType": "NUMERIC",
-                  "value": null,
-                  "predicate": {
-                    "type": "NUMERIC",
-                    "operation": "GREATER",
-                    "value": {
-                      "defaultValue": 25,
-                      "userValue": null,
-                      "dynamicValue": null
-                    }
-                  }
-                }
-              ],
-              "spec": {
-                "type": "DURATION",
-                "unit": "SECONDS",
-                "predicate": {
-                  "defaultValue": 5,
-                  "userValue": null,
-                  "dynamicValue": null
-                }
-              }
-            },
-            "schedule": null,
-            "alarmDetails": null,
-            "dashboardId": null
-          }
-        },
-        "clearRule": null,
-        "propagate": false,
-        "propagateToOwner": false,
-        "propagateToTenant": false,
-        "propagateRelationTypes": null
-      },
-      {
-        "id": "0e9f3cd1-0477-eee1-2ace-a9aed68678a7",
-        "alarmType": "Invalid Temperature data Warning",
-        "createRules": {
-          "WARNING": {
+          "MAJOR": {
             "condition": {
               "condition": [
                 {

@@ -1,0 +1,19 @@
+name,type,access-token
+TemperatureSensor n°1,Temperature Humidity sensor profile,TemperatureSensor1
+TemperatureSensor n°2,Temperature Humidity sensor profile,TemperatureSensor2
+TemperatureSensor n°3,Temperature Humidity sensor profile,TemperatureSensor3
+FluidSensor n°1,Fluid sensor profile,FluidSensor1
+FluidSensor n°2,Fluid sensor profile,FluidSensor2
+FluidSensor n°3,Fluid sensor profile,FluidSensor3
+LocationSensor n°1,Location sensor profile,LocationSensor1 
+LocationSensor n°2,Location sensor profile,LocationSensor2
+LocationSensor n°3,Location sensor profile,LocationSensor3
+LocationSensor n°4,Location sensor profile,LocationSensor4
+LocationSensor n°5,Location sensor profile,LocationSensor5
+LocationSensor n°6,Location sensor profile,LocationSensor6
+LocationSensor n°7,Location sensor profile,LocationSensor7
+LocationSensor n°8,Location sensor profile,LocationSensor8
+LocationSensor n°9,Location sensor profile,LocationSensor9
+LightSensor n°1,Light sensor profile,LightSensor1
+LightSensor n°2,Light sensor profile,LightSensor2
+LightSensor n°3,Light sensor profile,LightSensor3
